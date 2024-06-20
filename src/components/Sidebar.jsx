@@ -2,6 +2,7 @@ import React from 'react'
 import {HiOutlineMenuAlt2,HiOutlineHome} from 'react-icons/hi'
 import {CiShoppingCart,CiDeliveryTruck} from 'react-icons/ci'
 import {IoHeartOutline} from 'react-icons/io5'
+import {NavLink} from 'react-router-dom'
 
 const Sidebar = () => {
   return (
@@ -9,32 +10,40 @@ const Sidebar = () => {
       <ul className="p-5 space-y-8">
         <li>
           <button>
-            <HiOutlineMenuAlt2 size={"1.5rem"}/>
+            <HiOutlineMenuAlt2 size={"2rem"}/>
           </button>
         </li>
 
         <li>
+          <NavLink to='/'>
           <button>
-            <HiOutlineHome size={"1.5rem"}/>
+            <HiOutlineHome size={"2rem"}/>
           </button>
+          </NavLink>
         </li>
 
         <li>
+        <NavLink to='/cart'>
           <button>
-            <CiShoppingCart size={"1.5rem"}/>
+            <CiShoppingCart size={"2rem"}/>
           </button>
+          </NavLink>
         </li>
 
         <li>
+        <NavLink to='/favs'>
           <button>
-            <IoHeartOutline size={"1.5rem"}/>
+            <IoHeartOutline size={"2rem"}/>
           </button>
+          </NavLink>
         </li>
 
         <li>
+        <NavLink to='/orders'>
           <button>
-            <CiDeliveryTruck size={"1.5rem"}/>
+            <CiDeliveryTruck size={"2rem"}/>
           </button>
+          </NavLink>
         </li>
 
       </ul>
